@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');
+
+// @keyframes beans {
+//     0%   {background-color: white;}
+//     90%  {background-color: lightgray;}
+// }
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  background: white;
+
+    // animation-name: beans;
+    // animation-duration: 4s;
+    // animation-timing-function: ease-in-out;
+    // animation-iteration-count: infinite;
+}
+
+#txt {
+  font-family: 'Space Mono', monospace;
+  font-family: 'VT323', monospace;
+  color: black;
+  font-size: 2rem;
+}
+
+.app {
+  width: 100%;
+  height: 90vh;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+}
+.container:hover .circle, .box:hover .circle {
+  transition: margin-left 1s ease;
+  margin-left: 30rem;
+}
+.container:hover .square, .box:hover .square {
+  transition: top 1s ease;
+  top: -2rem;
+  // margin-bottom: 15rem;
+}
+.box {
+  width: 27rem;
+  height: auto;
+  background: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 0.3rem solid yellow;
+}
+
+.box-item {
+  width: 100%;
+  height: 3rem;
+  // padding: 1rem 0;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  position: relative;
+  // overflow: hidden;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: white;
+    }
+    i {
+      padding: 0 0.5rem;
+      font-size: 1.5rem;
+      color: white;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+#stay-underneath{
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: absolute;
+}
+#slide-right {
+    position: absolute;
+    left: 0;
+    height : 100%;
+    width : 100%;
+    background: black;
+    transition: left 0.5s ease-out;
+
+}
+.box-item:hover #slide-right {
+    left: 90%;
+    transition: left 0.7s ease-in;
+    width:100%;
+    height:100%;
+}
+
+.box-item__one,
+.box-item__three,
+.box-item__five,
+.box-item__seven {
+  background: black;
+  width: 100%;
+}
+
+.circle {
+  width: 24rem;
+  height: 24rem;
+  background: blue;
+  position: absolute;
+  border-radius: 100%;
+  left: 35rem;
+  top: 14rem;
+  overflow: hidden;
+  transition: margin-left 0.7s ease;
+
+}
+
+.square {
+  width: 10rem;
+  height: 10rem;
+  background: red;
+  position: absolute;
+  z-index: 9999;
+  top: 8rem;
+  left: 20rem;
+  transition: top 1s ease;
+
+  font-family: 'Space Mono', monospace;
+  font-family: 'VT323', monospace;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-two {
+  text-align: center;
+  &-item {
+    font-family: 'Space Mono', monospace;
+    font-family: 'VT323', monospace;
+    color: lightgray;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .square, .circle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 70%;
+  }
+  .box {
+    width: 100%;
+  }
+}
