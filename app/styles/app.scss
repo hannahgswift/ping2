@@ -125,8 +125,10 @@ body {
   background: blue;
   position: absolute;
   border-radius: 100%;
-  left: 35rem;
-  top: 14rem;
+  // left: 35rem;
+  // top: 14rem;
+  left: 55%;
+  top: 30%;
   overflow: hidden;
   transition: margin-left 0.7s ease;
 
@@ -138,8 +140,10 @@ body {
   background: red;
   position: absolute;
   z-index: 9999;
-  top: 8rem;
-  left: 20rem;
+  // top: 8rem;
+  // left: 20rem;
+  top: 17%;
+  left: 30%;
   transition: top 1s ease;
 
   font-family: 'Space Mono', monospace;
